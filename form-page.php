@@ -1,3 +1,4 @@
+<?php
 //Initialisation de l'objet PDO et ouverture de la connexion pour appel à la base de données
 $Pdo_Object = new PDO("mysql:host=127.0.0.1;dbname=DBSite","root","",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION )); 
 
@@ -42,3 +43,4 @@ finally{
  //Attention le finaly ne fonctionne que sur php 5.6 et supérieur 
  //Fermeture de la connexion en détruisant la référence mémoire à l'objet PDO
  $Pdo_Object = null;}
+?>
