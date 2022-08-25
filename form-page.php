@@ -39,8 +39,5 @@ try {
 } catch (Exception $e) {
    echo $e->getMessage(); 
 }
-finally{
- //Attention le finaly ne fonctionne que sur php 5.6 et supérieur 
- //Fermeture de la connexion en détruisant la référence mémoire à l'objet PDO
- $Pdo_Object = null;}
+
 ?>
