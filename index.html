@@ -383,23 +383,24 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="form-page.php" method="post">
+                    <form method="post" action="https://www.example.com/cgi-bin/FormMail.pl" accept-charset="ISO-8859-1" onsubmit="var   originalCharset = document.charset; document.charset = 'ISO-8859-1';
+  window.onbeforeunload = function (){document.charset=originalCharset;};">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" >
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
@@ -411,6 +412,11 @@
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                 <input type="hidden" name="recipient" value="admin@example.com" />
+    <input type="hidden" name="subject" value="Subject" />
+    <input type="hidden" name="redirect"  value="https://www.example.com/thanks.html" />
+    <input type="hidden" name="missing_fields_redirect"  value="https://www.example.com/error.html" />
+    <input type="hidden" name="required" value="name,email,Message" />
                             </div>
                         </div>
                     </form>
