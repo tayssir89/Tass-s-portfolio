@@ -10,9 +10,9 @@ try {
       if(!isset($_POST['message'])) throw new Exception("Le paramètre message est absent");
 
    //Contrôle des formats des deux paramètres via les expressions régulières
-   $Format_name = '#^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\.\_\-\s]{5,500}$#'
+   $Format_name = '#^[a-zA-Z0-9]{5,500}$#'
    $Format_Email = '#[a-z0-9]{1,}[\-\_\.a-z0-9]{0,}@[a-z]{2,}[\-\_\.a-z0-9]{0,}\.[a-z]{2,6}$#';
-   $Format_subject = '#^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\.\_\-\s]{5,500}$#'
+   $Format_subject = '#^[a-zA-Z0-9]{5,500}$#'
    $Format_message = '#^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\.\_\-\s]{5,500}$#'
 
    if(!preg_match($Format_Content , $_POST['name']))  throw new Exception("Le paramètre name ne correspond pas au format attendu - limite de 500 caractères");
