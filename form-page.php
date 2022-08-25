@@ -1,6 +1,6 @@
 <?php
 //Initialisation de l'objet PDO et ouverture de la connexion pour appel à la base de données
-$Pdo_Object = new PDO("mysql:host=127.0.0.1;dbname=DBSite","root","",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION )); 
+$Pdo_Object = new PDO("mysql:host=127.0.0.1;dbname=dbsite","root","",array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION )); 
 
 try {
    //Contrôle de l'éxistance des deux paramètres email et content
